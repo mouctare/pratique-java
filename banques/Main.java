@@ -26,7 +26,7 @@ public  static void main(String[] args) {
         System.out.println("Votre solde est de: " + compteCourant);
     }
 
-    if(choix == 2){
+   else  if(choix == 2){
         System.out.println("Combien souhaitez vous déposer sur votre compe ? ");
 
         // recuperer le montant 
@@ -40,7 +40,8 @@ public  static void main(String[] args) {
 
          System.out.println("Vous avez déposez  " + montant + " euro ");
 
-    }   if(choix == 3){
+    }  
+    else if(choix == 3){
         System.out.println("Combien souhaitez vous retirez d'argent  sur votre compte ?");
 
         int montant = scanner.nextInt();

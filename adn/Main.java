@@ -22,18 +22,21 @@ public static void main(String[] args) {
           System.out.println("Bonjour, " + prenom + ", vous avez " + age + " ans" + " vous etes du genre "  + sexe);
     
          
-        String adn = "77x77x7777x777x777x777";
-        int compteCaractere = adn.length();
+          String adn = "77777x7777x777x77x77xxxx";
 
-        if(compteCaractere < 18 && age >= 21){
+          long compteurTaille = adn.chars().filter(c -> c == 'x').count();
+          System.out.println("nombre de x : " + compteurTaille);
+      
 
-        System.out.println(" + de 21 ans");
+        if(compteurTaille < 18 && age < 21){
+
+        System.out.println(" vous avez moins  de 21 ans");
      }
-       else if(compteCaractere > 6 && age <= 21){
+       else if(compteurTaille > 6 && age > 21){
         System.out.println(" vrai");
 
      }
-       else if(compteCaractere <= 6 && age >= 65){
+       else if(compteurTaille <= 6 && age >= 65){
         System.out.println(" vrai");
 
      }else{
@@ -43,6 +46,5 @@ public static void main(String[] args) {
     } 
     
 }
-
 }
 

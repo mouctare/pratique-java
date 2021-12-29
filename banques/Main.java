@@ -11,7 +11,7 @@ public class Main {
     compte.displayBalance();
     compte.depositMoney(300);
     compte.displayBalance();
-    compte.withdrawWoney(100);
+    compte.withdrawWoney(130);
     compte.displayBalance();
     
 

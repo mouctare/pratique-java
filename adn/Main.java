@@ -29,10 +29,9 @@ public static void main(String[] args) {
         // boucler sur chaque ligne tant qu'il y'a en a encore
         while(ligne != null){
             int nombreCaractere = ligne.length();
-            if(nombreCaractere < 6){
-               compteur +=1;
-            }
-            System.out.println(ligne);
+            String trancheAge = nombreCaractere <= 6 ? "+65 ans" : nombreCaractere < 18 ? "-21 ans" : "+ de 21 ans";
+            System.out.println(trancheAge);
+         //   System.out.println(ligne);
             ligne = lecture.readLine();
         }
 

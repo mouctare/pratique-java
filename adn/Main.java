@@ -4,11 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
+
 
 public class Main {
 
 public static void main(String[] args) {
+
+    int compteur = 0;
 
     // parcourir le fichier et lire chaque sequence d'ADN
    File monfier = new File("nav.txt");
@@ -26,6 +28,10 @@ public static void main(String[] args) {
 
         // boucler sur chaque ligne tant qu'il y'a en a encore
         while(ligne != null){
+            int nombreCaractere = ligne.length();
+            if(nombreCaractere < 6){
+               compteur +=1;
+            }
             System.out.println(ligne);
             ligne = lecture.readLine();
         }
@@ -39,6 +45,8 @@ public static void main(String[] args) {
    }else{
     System.out.println("Fier existant not found");  
    }
+
+   System.out.println("Le nombre de personne de plus de 65 ans est de : " + compteur);  
 }
 
 }
